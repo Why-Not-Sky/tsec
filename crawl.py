@@ -11,6 +11,7 @@ import requests
 import argparse
 from lxml import html
 from datetime import datetime, timedelta
+from urllib import urlencode, urlopen
 
 from os import mkdir
 from os.path import isdir
@@ -36,6 +37,86 @@ class Crawler():
         cw.writerow(row)
         f.close()
 
+    def _download_data_by_url(self, url, fname):
+        response = urlopen(url)
+        fname = '{}/{}.csv'.format(self.prefix, fname)
+        data = response.read()
+
+        with open(fname, 'w') as fd:
+            fd.write(data)
+            fd.close()
+
+
+    def get_tse_data_all(self, date_str):
+        url = 'http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX3_print.php?'
+        query_string = 'genpage=genpage/Report{quote_date}/A112?{quote_date}ALL_1.php&type=csv'.format(quote_date=date_str)
+        url += query_string
+
+    # 上市：
+    # http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX3_print.php?genpage=genpage/Report20160623/A11220160623ALL_1.php&type=csv
+
+    # 上櫃：
+    # http://www.tpex.org.tw/ch/stock/aftertrading/DAILY_CLOSE_quotes/stk_quote_download.php?d=105/06/23&s=0,asc,0
+
+        url = 'http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX3_print.php?genpage=genpage/Report20160623/A11220160623ALL_1.php&type=csv'
+
+        self._download_data_by_url(url, date_str)
+        return
+        # Get html page and parse as tree
+        #page = requests.post(url, data=query_string)
+
+    def get_tse_data_to_one_file(self, date_str):
+        taiwan_date_str = str(int(date_str[:4])-1911) + date_str[5:]
+        payload = {
+            'download': '',
+            'qdate': taiwan_date_str,
+            'selectType': 'ALL'
+        }
+        url = 'http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX.php'
+        # http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX.php?download=''&qdate=20160707&selectType=ALL
+
+        # Get html page and parse as tree
+        page = requests.post(url, data=payload)
+
+        if not page.ok:
+            logging.error("Can not get TSE data at {}".format(date_str))
+            return
+
+        # Parse page
+        tree = html.fromstring(page.text)
+
+        with open('{}/{}_ALL.text'.format(self.prefix, date_str), 'w') as fd:
+            fd.write(page.content.encode('utf-8'))
+            fd.close()
+
+        return
+
+        f = open('{}/{}_ALL.csv'.format(self.prefix, date_str), 'ab')
+        cw = csv.writer(f, lineterminator='\n')
+
+        for tr in tree.xpath('//table[2]/tbody/tr'):
+            tds = tr.xpath('td/text()')
+
+            sign = tr.xpath('td/font/text()')
+            sign = '-' if len(sign) == 1 and sign[0] == u'－' else ''
+
+            row = self._clean_row([
+                tds[0].strip(), # symbol
+                date_str,  # 日期
+                tds[2],  # 成交股數
+                tds[4],  # 成交金額
+                tds[5],  # 開盤價
+                tds[6],  # 最高價
+                tds[7],  # 最低價
+                tds[8],  # 收盤價
+                sign + tds[9],  # 漲跌價差
+                tds[3],  # 成交筆數
+            ])
+
+            cw.writerow(row)
+
+        f.close()
+
     def _get_tse_data(self, date_str):
         payload = {
             'download': '',
@@ -43,6 +124,7 @@ class Crawler():
             'selectType': 'ALL'
         }
         url = 'http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX.php'
+        # http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX.php?download=''&qdate=20160707&selectType=ALL
 
         # Get html page and parse as tree
         page = requests.post(url, data=payload)
@@ -104,7 +186,6 @@ class Crawler():
                 ])
                 self._record(tr[0], row)
 
-
     def get_data(self, year, month, day):
         date_str = '{0}/{1:02d}/{2:02d}'.format(year - 1911, month, day)
         print 'Crawling {}'.format(date_str)
@@ -163,5 +244,11 @@ def main():
     else:
         crawler.get_data(first_day.year, first_day.month, first_day.day)
 
+def test_download_all(date_str='20160623'):
+    crawler = Crawler()
+    #crawler.get_tse_data_all(date_str)
+    crawler.get_tse_data_to_one_file(date_str)
+
 if __name__ == '__main__':
-    main()
+    #main()
+    test_download_all('20160705')
