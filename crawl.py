@@ -85,12 +85,6 @@ class Crawler():
         # Parse page
         tree = html.fromstring(page.text)
 
-        with open('{}/{}_ALL.text'.format(self.prefix, date_str), 'w') as fd:
-            fd.write(page.content.encode('utf-8'))
-            fd.close()
-
-        return
-
         f = open('{}/{}_ALL.csv'.format(self.prefix, date_str), 'ab')
         cw = csv.writer(f, lineterminator='\n')
 
@@ -247,11 +241,11 @@ def main():
     else:
         crawler.get_data(first_day.year, first_day.month, first_day.day)
 
-def test_download_all(date_str='20160623'):
+def test_download_all(date_str='20160612'):
     crawler = Crawler()
     #crawler.get_tse_data_all(date_str)
     crawler.get_tse_data_to_one_file(date_str)
 
 if __name__ == '__main__':
     #main()
-    test_download_all('20160705')
+    test_download_all('20160712')
