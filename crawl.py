@@ -16,6 +16,35 @@ from urllib import urlencode, urlopen
 from os import mkdir
 from os.path import isdir
 
+class data():
+    def  __init__(self, dtype, url):
+        self.type=dtype
+        self.url=url
+
+class etl():
+    def __init__(self):
+        self.source = data('url', 'http:')
+        pass
+
+    def _extract(self):
+        pass
+
+    def _transformation(self):
+        pass
+
+    def _load(self):
+        pass
+
+    def run(self):
+        self._extract(self)
+        self._transform(self)
+        self._load(self)
+
+class tse(etl):
+    def __init__(self):
+        pass
+
+
 class Crawler():
     def __init__(self, prefix="data"):
         ''' Make directory if not exist when initialize '''
@@ -45,7 +74,6 @@ class Crawler():
         with open(fname, 'w') as fd:
             fd.write(data)
             fd.close()
-
 
     def get_tse_data_all(self, date_str):
         url = 'http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX3_print.php?'
