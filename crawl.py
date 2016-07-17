@@ -51,6 +51,7 @@ class Crawler():
         if not isdir(prefix):
             mkdir(prefix)
         self.prefix = prefix
+        self.output_file = ''
 
     def _clean_row(self, row):
         ''' Clean comma and spaces '''
@@ -93,7 +94,7 @@ class Crawler():
         # Get html page and parse as tree
         #page = requests.post(url, data=query_string)
 
-    def get_tse_data_to_one_file(self, date_str):
+    def _get_tse_data_to_one_file(self, date_str):
         taiwan_date_str = str(int(date_str[:4])-1911) + date_str[5:]
         payload = {
             'download': '',
@@ -113,7 +114,7 @@ class Crawler():
         # Parse page
         tree = html.fromstring(page.text)
 
-        f = open('{}/{}_ALL.csv'.format(self.prefix, date_str), 'ab')
+        f = open('{}/{}_TWSE.csv'.format(self.prefix, date_str), 'ab')
         cw = csv.writer(f, lineterminator='\n')
 
         for tr in tree.xpath('//table[2]/tbody/tr'):
@@ -123,8 +124,8 @@ class Crawler():
             sign = '-' if len(sign) == 1 and sign[0] == u'－' else ''
 
             row = self._clean_row([
-                tds[0].strip(), # symbol
-                date_str,  # 日期
+                tds[0].strip(), # 股票代號
+                date_str,  # 成交日期
                 tds[2],  # 成交股數
                 tds[4],  # 成交金額
                 tds[5],  # 開盤價
@@ -138,6 +139,41 @@ class Crawler():
             cw.writerow(row)
 
         f.close()
+
+    def _get_otc_data_to_one_file(self, date_str):
+        ttime = str(int(time.time() * 100))
+        url = 'http://www.tpex.org.tw/web/stock/aftertrading/daily_close_quotes/stk_quote_result.php?l=zh-tw&d={}&_={}'.format(
+            date_str, ttime)
+        page = requests.get(url)
+
+        if not page.ok:
+            logging.error("Can not get OTC data at {}".format(date_str))
+            return
+
+        result = page.json()
+
+        if result['reportDate'] != date_str:
+            logging.error("Get error date OTC data at {}".format(date_str))
+            return
+
+        f = open('{}/{}_OTC.csv'.format(self.prefix, date_str), 'ab')
+        cw = csv.writer(f, lineterminator='\n')
+
+        for table in [result['mmData'], result['aaData']]:
+            for tr in table:
+                row = self._clean_row([
+                    tr[0],  # 股票代號
+                    date_str, # 成交日期
+                    tr[8],  # 成交股數
+                    tr[9],  # 成交金額
+                    tr[4],  # 開盤價
+                    tr[5],  # 最高價
+                    tr[6],  # 最低價
+                    tr[2],  # 收盤價
+                    tr[3],  # 漲跌價差
+                    tr[10]  # 成交筆數
+                ])
+                self._record(tr[0], row)
 
     def _get_tse_data(self, date_str):
         payload = {
@@ -211,8 +247,8 @@ class Crawler():
     def get_data(self, year, month, day):
         date_str = '{0}/{1:02d}/{2:02d}'.format(year - 1911, month, day)
         print 'Crawling {}'.format(date_str)
-        self._get_tse_data(date_str)
-        self._get_otc_data(date_str)
+        self._get_tse_data_to_one_file(date_str)
+        self._get_otc_data_to_one_file(date_str)
 
 
 def main():
@@ -271,8 +307,8 @@ def main():
 
 def test_download_all(date_str='20160612'):
     crawler = Crawler()
-    #crawler.get_tse_data_all(date_str)
-    crawler.get_tse_data_to_one_file(date_str)
+    crawler._get_tse_data_to_one_file(date_str)
+    crawler._get_otc_data_to_one_file(date_str)
 
 if __name__ == '__main__':
     #main()
