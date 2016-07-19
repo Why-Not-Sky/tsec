@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c110cf99-b527-4607-b5b8-7062bbc75887" name="Default" comment="" />
+    <list default="true" id="c110cf99-b527-4607-b5b8-7062bbc75887" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/tsec.iml" afterPath="$PROJECT_DIR$/.idea/tsec.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawl.py" afterPath="$PROJECT_DIR$/crawl.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/experiment/download_file_via_url.py" afterPath="$PROJECT_DIR$/experiment/download_file_via_url.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/experiment/test_read_from_url.py" afterPath="$PROJECT_DIR$/experiment/test_read_from_url.py" />
+    </list>
     <ignored path="tsec.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,24 +31,22 @@
       <file leaf-file-name="crawl.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/crawl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+            <state relative-caret-position="256">
+              <caret line="92" column="75" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="75" />
               <folding>
-                <element signature="e#25#34#0" expanded="true" />
-                <element signature="e#531#761#0" expanded="false" />
-                <element signature="e#809#994#0" expanded="false" />
-                <element signature="e#1053#1250#0" expanded="false" />
-                <element signature="e#3654#4839#0" expanded="false" />
-                <element signature="e#4888#5873#0" expanded="false" />
-                <element signature="e#5925#6108#0" expanded="false" />
-                <element signature="e#6127#8058#0" expanded="false" />
+                <element signature="e#25#40#0" expanded="true" />
+                <element signature="e#1219#1404#0" expanded="false" />
+                <element signature="e#1713#2453#0" expanded="false" />
+                <element signature="e#4017#5199#0" expanded="false" />
+                <element signature="e#5248#6256#0" expanded="false" />
+                <element signature="e#6766#8785#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="test_str_unicode.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment/test_str_unicode.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -50,53 +55,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="post_process.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/post_process.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/python3.5/lib/python3.5/site-packages/lxml/html/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="367">
+              <caret line="727" column="0" selection-start-line="727" selection-start-column="0" selection-end-line="727" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="csv.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/csv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="152" column="31" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="24" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#52#61#0" expanded="true" />
+                <element signature="e#1513#1726#0" expanded="false" />
+                <element signature="e#5224#16127#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="response.py" pinned="false" current-in-tab="false">
-        <entry file="file:///Library/Python/2.7/site-packages/requests/packages/urllib3/response.py">
+      <file leaf-file-name="_csv.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.1/python_stubs/1471670834/_csv.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5145">
-              <caret line="353" column="0" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
+            <state relative-caret-position="-279">
+              <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pydevd.py" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <file leaf-file-name="util.py" pinned="false" current-in-tab="false">
+        <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/pip/_vendor/distlib/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13530">
-              <caret line="937" column="0" selection-start-line="937" selection-start-column="0" selection-end-line="937" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="112">
+              <caret line="1484" column="8" selection-start-line="1484" selection-start-column="8" selection-end-line="1484" selection-end-column="8" />
+              <folding>
+                <element signature="e#2268#3279#0" expanded="false" />
+                <element signature="e#3334#4355#0" expanded="false" />
+                <element signature="e#5209#5536#0" expanded="false" />
+                <element signature="e#5775#7153#0" expanded="false" />
+                <element signature="e#7196#7776#0" expanded="false" />
+                <element signature="e#8776#9699#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.sh" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.sh">
+      <file leaf-file-name="download_file_via_url.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment/download_file_via_url.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -118,16 +132,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/download_file_via_url.py" />
-        <option value="$PROJECT_DIR$/crawl.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/experiment/download_file_via_url.py" />
+        <option value="$PROJECT_DIR$/experiment/test_read_from_url.py" />
+        <option value="$PROJECT_DIR$/crawl.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="y" value="33" />
-    <option name="width" value="1400" />
-    <option name="height" value="777" />
+    <option name="x" value="54" />
+    <option name="y" value="126" />
+    <option name="width" value="1286" />
+    <option name="height" value="716" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -154,32 +170,57 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tsec" />
+              <option name="myItemId" value="tsec3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; Python 3.5.1 virtualenv at ~/python3.5 &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tsec" />
+              <option name="myItemId" value="tsec3" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="tsec" />
+              <option name="myItemId" value="tsec3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tsec3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tsec3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="experiment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/Dropbox/myprojects/TExpress" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="writerow&#9;null&#9;null" />
   </component>
   <component name="RunManager" selected="Python.crawl">
     <configuration default="false" name="crawl" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -195,6 +236,40 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="tsec" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crawl.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="download_file_via_url" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tsec" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment/download_file_via_url.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="test_read_from_url" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="tsec" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment/test_read_from_url.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -333,12 +408,16 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.crawl" />
+      <item index="1" class="java.lang.String" itemvalue="Python.download_file_via_url" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test_read_from_url" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="Python.crawl" />
+        <item index="1" class="java.lang.String" itemvalue="Python.download_file_via_url" />
+        <item index="2" class="java.lang.String" itemvalue="Python.test_read_from_url" />
       </list>
     </recent_temporary>
   </component>
@@ -356,28 +435,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="33" width="1400" height="777" extended-state="0" />
+    <frame x="54" y="126" width="1286" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13714285" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17884915" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32766616" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39567232" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32909605" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997175" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -388,21 +467,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/crawl.py</url>
-          <line>36</line>
+          <line>44</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/crawl.py</url>
-          <line>44</line>
-          <option name="timeStamp" value="8" />
+          <url>file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/csv.py</url>
+          <line>152</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/crawl.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="9" />
+          <url>file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/pip/_vendor/distlib/util.py</url>
+          <line>1492</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/pip/_vendor/distlib/util.py</url>
+          <line>1485</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="10" />
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -411,19 +502,67 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/post_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/requests/packages/urllib3/response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5145">
+          <caret line="353" column="0" selection-start-line="353" selection-start-column="0" selection-end-line="353" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13530">
+          <caret line="937" column="0" selection-start-line="937" selection-start-column="0" selection-end-line="937" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crawl.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1200">
           <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
           <folding>
-            <element signature="e#25#34#0" expanded="true" />
-            <element signature="e#531#761#0" expanded="false" />
-            <element signature="e#809#994#0" expanded="false" />
-            <element signature="e#1053#1250#0" expanded="false" />
-            <element signature="e#3654#4839#0" expanded="false" />
-            <element signature="e#4888#5873#0" expanded="false" />
-            <element signature="e#5925#6108#0" expanded="false" />
-            <element signature="e#6127#8058#0" expanded="false" />
+            <element signature="e#25#40#0" expanded="true" />
+            <element signature="e#1219#1404#0" expanded="false" />
+            <element signature="e#1713#2453#0" expanded="false" />
+            <element signature="e#4017#5199#0" expanded="false" />
+            <element signature="e#5248#6256#0" expanded="false" />
+            <element signature="e#6766#8785#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -483,14 +622,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#25#34#0" expanded="true" />
-            <element signature="e#531#761#0" expanded="false" />
-            <element signature="e#809#994#0" expanded="false" />
-            <element signature="e#1053#1250#0" expanded="false" />
-            <element signature="e#3654#4839#0" expanded="false" />
-            <element signature="e#4888#5873#0" expanded="false" />
-            <element signature="e#5925#6108#0" expanded="false" />
-            <element signature="e#6127#8058#0" expanded="false" />
+            <element signature="e#25#40#0" expanded="true" />
+            <element signature="e#1219#1404#0" expanded="false" />
+            <element signature="e#1713#2453#0" expanded="false" />
+            <element signature="e#4017#5199#0" expanded="false" />
+            <element signature="e#5248#6256#0" expanded="false" />
+            <element signature="e#6766#8785#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -542,14 +679,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#25#34#0" expanded="true" />
-            <element signature="e#531#761#0" expanded="false" />
-            <element signature="e#809#994#0" expanded="false" />
-            <element signature="e#1053#1250#0" expanded="false" />
-            <element signature="e#3654#4839#0" expanded="false" />
-            <element signature="e#4888#5873#0" expanded="false" />
-            <element signature="e#5925#6108#0" expanded="false" />
-            <element signature="e#6127#8058#0" expanded="false" />
+            <element signature="e#25#40#0" expanded="true" />
+            <element signature="e#1219#1404#0" expanded="false" />
+            <element signature="e#1713#2453#0" expanded="false" />
+            <element signature="e#4017#5199#0" expanded="false" />
+            <element signature="e#5248#6256#0" expanded="false" />
+            <element signature="e#6766#8785#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -592,14 +727,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#25#34#0" expanded="true" />
-            <element signature="e#531#761#0" expanded="false" />
-            <element signature="e#809#994#0" expanded="false" />
-            <element signature="e#1053#1250#0" expanded="false" />
-            <element signature="e#3654#4839#0" expanded="false" />
-            <element signature="e#4888#5873#0" expanded="false" />
-            <element signature="e#5925#6108#0" expanded="false" />
-            <element signature="e#6127#8058#0" expanded="false" />
+            <element signature="e#25#40#0" expanded="true" />
+            <element signature="e#1219#1404#0" expanded="false" />
+            <element signature="e#1713#2453#0" expanded="false" />
+            <element signature="e#4017#5199#0" expanded="false" />
+            <element signature="e#5248#6256#0" expanded="false" />
+            <element signature="e#6766#8785#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -621,14 +754,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/run.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -672,19 +797,129 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="11" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment/1.csv" />
+    <entry file="file://$PROJECT_DIR$/experiment/2.csv" />
+    <entry file="file://$PROJECT_DIR$/experiment/3.csv" />
+    <entry file="file://$USER_HOME$/python3.5/lib/python3.5/re.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="181" column="0" selection-start-line="181" selection-start-column="0" selection-end-line="181" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/tablib/packages/unicodecsv/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.1/python_stubs/1471670834/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="2939" column="4" selection-start-line="2939" selection-start-column="4" selection-end-line="2939" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2016.1/python_stubs/1471670834/_csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-279">
+          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/csv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="152" column="31" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="24" />
+          <folding>
+            <element signature="e#52#61#0" expanded="true" />
+            <element signature="e#1513#1726#0" expanded="false" />
+            <element signature="e#5224#16127#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment/test_str_unicode.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/python3.5/lib/python3.5/site-packages/lxml/html/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="727" column="0" selection-start-line="727" selection-start-column="0" selection-end-line="727" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment/test_unicode_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment/test_read_from_url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="34" />
+          <folding>
+            <element signature="e#204#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages/pip/_vendor/distlib/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="1484" column="8" selection-start-line="1484" selection-start-column="8" selection-end-line="1484" selection-end-column="8" />
+          <folding>
+            <element signature="e#2268#3279#0" expanded="false" />
+            <element signature="e#3334#4355#0" expanded="false" />
+            <element signature="e#5209#5536#0" expanded="false" />
+            <element signature="e#5775#7153#0" expanded="false" />
+            <element signature="e#7196#7776#0" expanded="false" />
+            <element signature="e#8776#9699#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment/download_file_via_url.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/crawl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="97" column="40" selection-start-line="97" selection-start-column="40" selection-end-line="97" selection-end-column="40" />
+        <state relative-caret-position="256">
+          <caret line="92" column="75" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="75" />
           <folding>
-            <element signature="e#25#34#0" expanded="true" />
-            <element signature="e#531#761#0" expanded="false" />
-            <element signature="e#809#994#0" expanded="false" />
-            <element signature="e#1053#1250#0" expanded="false" />
-            <element signature="e#3654#4839#0" expanded="false" />
-            <element signature="e#4888#5873#0" expanded="false" />
-            <element signature="e#5925#6108#0" expanded="false" />
-            <element signature="e#6127#8058#0" expanded="false" />
+            <element signature="e#25#40#0" expanded="true" />
+            <element signature="e#1219#1404#0" expanded="false" />
+            <element signature="e#1713#2453#0" expanded="false" />
+            <element signature="e#4017#5199#0" expanded="false" />
+            <element signature="e#5248#6256#0" expanded="false" />
+            <element signature="e#6766#8785#0" expanded="false" />
           </folding>
         </state>
       </provider>
