@@ -33,6 +33,7 @@ print ("downloading version 1 with urllib:", url1)
 #urllib.urlretrieve(url1, "1.csv")  #python 2
 urllib.request.urlretrieve(url1, "1-urlretrieve.csv")  #python 3
 
+<<<<<<< HEAD
 print ("downloading version 1 with requests.post")
 payload = {
     'download': 'csv',
@@ -60,6 +61,24 @@ with open("2-urlopen.csv", "wb") as code:
     code.write(data)
 
 
+=======
+print ("downloading with urllib")
+#urllib.urlretrieve(url, "1.csv")  #python 2
+urllib.request.urlretrieve(url, "1.csv")  #python 3
+
+print ("downloading with urllib2")
+#f = urllib2.urlopen(url)  #python 2
+f = urllib.request.urlopen(url)  #python 3
+data = f.read()
+with open("2.csv", "wb") as code:
+    code.write(data)
+
+print ("downloading with requests")
+r = requests.get(url)
+with open("3.csv", "wb") as code:
+    code.write(r.content)
+
+>>>>>>> 383e75f8e6156d564c6dab0c2494db3dbc8aa18f
 #f = urllib2.urlopen(url)
 #f = urllib.request.urlopen(url)  #python 3
 #data = f.read()

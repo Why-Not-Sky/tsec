@@ -24,6 +24,7 @@ class Crawler():
             mkdir(prefix)
         self.prefix = prefix
 
+<<<<<<< .merge_file_zGjoAK
         if not isdir(origin):
             mkdir(origin)
         self.origin = origin
@@ -34,6 +35,9 @@ class Crawler():
         # 上市：
         # http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX3_print.php?genpage=genpage/Report201607/A11220160712ALL_1.php&type=csv
         # url = 'http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX3_print.php?genpage=genpage/Report201607/A11220160712ALL_1.php&type=csv'
+=======
+        self.fields = ['股號', '日期', '成交股數', '成交金額', '開盤價', '最高價', '最低價', '收盤價', '漲跌價差', '成交筆數']
+>>>>>>> .merge_file_FVDP7n
 
     def _clean_row(self, row):
         ''' Clean comma and spaces '''
@@ -41,7 +45,10 @@ class Crawler():
 
         for index, content in enumerate(row):
             row[index] = re.sub(",", "", content.strip())
+<<<<<<< .merge_file_zGjoAK
             '''for python3 2016/07/19'''
+=======
+>>>>>>> .merge_file_FVDP7n
             # filter() in python 3 does not return a list, but a iterable filter object. Call next() on it to get the first filtered item:
             row[index] = ''.join(list(filter(lambda x: x in string.printable, row[index])))
             #rdict[self.fields[index]] = row[index]
@@ -65,6 +72,7 @@ class Crawler():
             fd.write(data)
             fd.close()
 
+<<<<<<< .merge_file_zGjoAK
     def _get_tse_data_raw2(self, date_str):
         '''
         another method to download the file
@@ -86,10 +94,28 @@ class Crawler():
         :return:
         '''
         url = "http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX.php?download=csv&qdate={}&selectType=ALL".format(taiwan_date_str)
+=======
+    def _get_tse_data_raw(self, date_str):
+        url = 'http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX3_print.php?'
+        query_string = 'genpage=genpage/Report{quote_date}/A112?{quote_date}ALL_1.php&type=csv'.format(
+            quote_date=date_str)
+        url += query_string
+
+        # 上市：
+        # http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX3_print.php?genpage=genpage/Report20160623/A11220160623ALL_1.php&type=csv
+
+        # 上櫃：
+        # http://www.tpex.org.tw/ch/stock/aftertrading/DAILY_CLOSE_quotes/stk_quote_download.php?d=105/06/23&s=0,asc,0
+>>>>>>> .merge_file_FVDP7n
 
         fname = '{}/{}.csv'.format(self.origin, date_str)
         self._download_data_by_url(url, fname)
 
+<<<<<<< .merge_file_zGjoAK
+=======
+        self._download_data_by_url(url, date_str)
+
+>>>>>>> .merge_file_FVDP7n
     def _get_tse_data_all(self, date_str):
         taiwan_date_str = str(int(date_str[:4]) - 1911) + date_str[5:]
         payload = {
@@ -110,7 +136,10 @@ class Crawler():
         # Parse page
         tree = html.fromstring(page.text)
 
+<<<<<<< .merge_file_zGjoAK
         '''for python3 2016/07/19'''
+=======
+>>>>>>> .merge_file_FVDP7n
         f = open('{}/{}_ALL.csv'.format(self.prefix, date_str), 'w') #'ab')
         cw = csv.writer(f, lineterminator='\n')
 
@@ -214,6 +243,7 @@ class Crawler():
         self._get_tse_data(date_str)
         self._get_otc_data(date_str)
 
+<<<<<<< .merge_file_zGjoAK
     def get_data_all(self, year, month, day):
         taiwan_date_str = '{0}/{1:02d}/{2:02d}'.format(year - 1911, month, day)
         print('Crawling {}'.format(date_str))
@@ -223,6 +253,13 @@ class Crawler():
         self._get_tse_data_raw2(date_str)
         #self._get_tse_data_all(date_str)
         #self._get_otc_data_all(date_str)
+=======
+    def get_data_all(self, date_str='20160612'):
+        # date_str = '{0}/{1:02d}/{2:02d}'.format(year - 1911, month, day)
+        print('Crawling {}'.format(date_str))
+        self._get_tse_data_all(date_str)
+        # self._get_otc_data_all(date_str)
+>>>>>>> .merge_file_FVDP7n
 
 
 def main():
@@ -280,6 +317,7 @@ def main():
         crawler.get_data(first_day.year, first_day.month, first_day.day)
 
 
+<<<<<<< .merge_file_zGjoAK
 def test_download_all(year, month, day):
     crawler = Crawler()
     crawler.get_data_all(year, month, day)
@@ -287,3 +325,13 @@ def test_download_all(year, month, day):
 if __name__ == '__main__':
     # main()
     test_download_all(2016, 7, 12)
+=======
+def test_download_all(date_str='20160612'):
+    crawler = Crawler()
+    crawler.get_data_all(date_str)
+
+
+if __name__ == '__main__':
+    # main()
+    test_download_all('20160712')
+>>>>>>> .merge_file_FVDP7n
