@@ -7,6 +7,7 @@ import requests
 import io
 import sys
 import locale
+import time
 
 print (sys.getdefaultencoding(), locale.getpreferredencoding())
 
@@ -18,7 +19,7 @@ locale.setlocale(locale.LC_ALL, '')
 #url1 = 'http://www.blog.pythonlibrary.org/wp-content/uploads/2012/06/wxDbViewer.zip'
 date_str='20160712'
 month_str=date_str[:6]
-taiwan_date_str = '105/07/12'
+#taiwan_date_str = '105/07/12'
 taiwan_date_str = '{0}/{1:02d}/{2:02d}'.format(int(date_str[:4]) - 1911, int(date_str[4:6]), int(date_str[6:]))
 
 # 上市：
@@ -29,11 +30,22 @@ url2 = "http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX3_print.php?
 # http://www.tpex.org.tw/ch/stock/aftertrading/DAILY_CLOSE_quotes/stk_quote_download.php?d=105/07/12&s=0,asc,0
 #url = 'http://www.tpex.org.tw/ch/stock/aftertrading/DAILY_CLOSE_quotes/stk_quote_download.php?d=105/07/12&s=0,asc,0'
 
+ttime = str(int(time.time() * 100))
+url_otc = 'http://www.tpex.org.tw/web/stock/aftertrading/daily_close_quotes/stk_quote_result.php?l=zh-tw&d={}&_={}'.format(taiwan_date_str, ttime)
+
+print ("testing the download file to long:", url_otc)
+# issue caused by excel's reader
+r = requests.get(url_otc)
+with open("0-otc.csv", "wb" ) as code:
+    code.write(r.content)
+    code.close()
+
+exit()
+
 print ("downloading version 1 with urllib:", url1)
 #urllib.urlretrieve(url1, "1.csv")  #python 2
 urllib.request.urlretrieve(url1, "1-urlretrieve.csv")  #python 3
 
-<<<<<<< HEAD
 print ("downloading version 1 with requests.post")
 payload = {
     'download': 'csv',
@@ -47,11 +59,13 @@ url = 'http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX.php'
 r = requests.post(url, data=payload)
 with open("1-post.csv", "wb") as code:
     code.write(r.content)
+    code.close()
 
 print ("downloading version 1 with requests.get")
 r = requests.get(url1)
 with open("1-get.csv", "wb" ) as code:
     code.write(r.content)
+    code.close()
 
 print ("downloading version 2 with urllib2")
 #f = urllib2.urlopen(url)  #python 2
@@ -59,26 +73,9 @@ f = urllib.request.urlopen(url2)  #python 3
 data = f.read()
 with open("2-urlopen.csv", "wb") as code:
     code.write(data)
+    code.close()
 
 
-=======
-print ("downloading with urllib")
-#urllib.urlretrieve(url, "1.csv")  #python 2
-urllib.request.urlretrieve(url, "1.csv")  #python 3
-
-print ("downloading with urllib2")
-#f = urllib2.urlopen(url)  #python 2
-f = urllib.request.urlopen(url)  #python 3
-data = f.read()
-with open("2.csv", "wb") as code:
-    code.write(data)
-
-print ("downloading with requests")
-r = requests.get(url)
-with open("3.csv", "wb") as code:
-    code.write(r.content)
-
->>>>>>> 383e75f8e6156d564c6dab0c2494db3dbc8aa18f
 #f = urllib2.urlopen(url)
 #f = urllib.request.urlopen(url)  #python 3
 #data = f.read()
