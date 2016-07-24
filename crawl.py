@@ -42,6 +42,7 @@ class Crawler():
         self.url_otc = 'http://www.tpex.org.tw/web/stock/aftertrading/daily_close_quotes/stk_quote_result.php?l=zh-tw&d={}&_={}'
 
         self.fields = ['股號', '日期', '成交股數', '成交金額', '開盤價', '最高價', '最低價', '收盤價', '漲跌價差', '成交筆數']
+        # symbol_id,trade_date,volume,amout,open,high,low,close,change,trans
 
     def _clean_row(self, row):
         ''' Clean comma and spaces '''
