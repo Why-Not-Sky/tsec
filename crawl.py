@@ -35,11 +35,14 @@ class Crawler():
         # 上櫃：
         # http://www.tpex.org.tw/ch/stock/aftertrading/DAILY_CLOSE_quotes/stk_quote_download.php?d=105/07/12&s=0,asc,0
         ''''''
+        self.url_tse_excel = 'http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX3_print.php?genpage=genpage/Report{}/A112{}ALL_1.php&type=csv'
         self.url_tse_csv = "http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX.php?download=csv&qdate={}&selectType=ALL"  # .format(taiwan_date_str)'
         self.url_tse = "http://www.twse.com.tw/ch/trading/exchange/MI_INDEX/MI_INDEX.php?download=&qdate={}&selectType=ALL"  # .format(taiwan_date_str)'
-        self.url_otc = "http://www.tpex.org.tw/ch/stock/aftertrading/DAILY_CLOSE_quotes/stk_quote_download.php?d={}&s=0,asc,0"  # .format(taiwan_date_str)'
+        self.url_otc_excel = 'http://www.tpex.org.tw/ch/stock/aftertrading/DAILY_CLOSE_quotes/stk_quote_download.php?d={}&s=0,asc,0'
+        self.url_otc = 'http://www.tpex.org.tw/web/stock/aftertrading/daily_close_quotes/stk_quote_result.php?l=zh-tw&d={}&_={}'
 
         self.fields = ['股號', '日期', '成交股數', '成交金額', '開盤價', '最高價', '最低價', '收盤價', '漲跌價差', '成交筆數']
+        # symbol_id,trade_date,volume,amout,open,high,low,close,change,trans
 
     def _clean_row(self, row):
         ''' Clean comma and spaces '''
@@ -157,11 +160,14 @@ class Crawler():
         return century_date
 
     def _download_data_by_url(self, url, fname):
-        response = urlopen(url)
+        #response = urlopen(url)
         #fname = '{}/{}.csv'.format(self.prefix, fname)
-        data = response.read()
+        #data = response.read()
+        r = requests.get(url)
+        data = r.content
 
-        #need to use binary to get the data
+        # need to use binary to get the data
+        # 原先的作法直接從request.response回來，需以binary的方式寫入
         with open(fname, 'wb') as fd:
             fd.write(data)
             fd.close()
@@ -283,11 +289,8 @@ class Crawler():
         return '{}/{}_O.csv'.format(path, taiwan_date_str.replace('/', ''))
 
     def _get_otc_data_raw(self, taiwan_date_str):
-        url = self.url_tse.format(taiwan_date_str)
-
         ttime = str(int(time.time() * 100))
-        url = 'http://www.tpex.org.tw/web/stock/aftertrading/daily_close_quotes/stk_quote_result.php?l=zh-tw&d={}&_={}'.format(
-            taiwan_date_str, ttime)
+        url = self.url_otc.format(taiwan_date_str, ttime)
 
         fname = self._get_otc_file_name(self.origin, taiwan_date_str)
 
