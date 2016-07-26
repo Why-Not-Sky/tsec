@@ -359,20 +359,10 @@ class Crawler():
     def get_data_all(self, start_date='20160701', end_date='20160715'):
         self._get_data_all_by_date(start_date)
 
-    def _get_date_range(self):
-        start_date = '20160701'
-        end_date = '20160731'
-        return start_date, end_date
-
-    def _write_execution_log(self):
-        pass
-
-
 '''
 args: crawl [start_date:yyyymmdd] [end_date:yyyymmdd]
 ex: crawl 20160701 20160712
 '''
-
 def main():
     # Set logging
     if not os.path.isdir('log'):

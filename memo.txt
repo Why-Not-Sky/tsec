@@ -1,0 +1,33 @@
+version  date    author     memo
+--------------------------------------------------------------------
+1.1     2016/07/26 	    產生crawl2，整理輸入輸出，提供批次
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+non-function requirement:
+    * add unit test
+    * implement by etl library: pets, odo, or tab…
+    * add exception handling: by AOP framework
+    * refactor by inheritance
+    * refactor by IoC
+
+------------------------------------------------------------------------------------------------------------------------------------------
+feature list:
+    * add filter to exclude untracked symbol
+    * crawling target
+        - personal investment 
+            > portfolio current stock 
+            > trading history
+            > wish list
+        - company: basic/finance/...
+            > company revenue...
+        - market information
+            > news
+            > industry/ chain/ group
+            >
+    * crawling only if the trade market open
+    * calculate moving average
+    * implement technical analysis library
+
+---------------------------------------------------------------------------------------------------------------------------------------'''
